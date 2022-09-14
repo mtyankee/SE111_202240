@@ -42,7 +42,7 @@
 
 
         <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
-        <input type="button" id="enter-button" value="Enter button">
+        <input type="button" id="enter-button" value="Enter">
 
         <br>
         <br>
@@ -68,7 +68,7 @@
 
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
-        document.querySelector("enter-button").addEventListener(`click`, alertName)
+        document.querySelector("#enter-button").addEventListener(`click`, alertName)
         
         
 
@@ -82,10 +82,10 @@
             hours --> hours worked, #hours
             rate --> hourly rate, #rate */
             
-            var fname = document.queryselector(`#first name`).value
-            var lname = document.queryselector(`#last name`).value
-            var hours = document.queryselector(`hours`).value
-            var rate = document.queryselector(`rate`).value
+            var fname = document.querySelector(`#first`).value
+            var lname = document.querySelector(`#last`).value
+            var hours = document.querySelector(`#hours`).value
+            var rate = document.querySelector(`#rate`).value
             //console.log() all four values
             
             console.log(fname)
@@ -102,7 +102,7 @@
 
             //convert both hours and rate to Number() data types
             hours = Number(hours)
-            rate - Number(rate)
+            rate = Number(rate)
 
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
 
@@ -118,26 +118,26 @@
             console.log(net.toFixed(2))
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = `full name: ${full}<br> hours worked: ${hours.tofixed(2)}<br> hourly rate:${rate.tofixed(2)}`
+            var finalMessage = `full name: ${full}<br> hours worked: ${hours.toFixed(2)}<br> hourly rate:${rate.toFixed(2)}`
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
-            var info = document.queryselector(`#info`)
+            var info = document.querySelector(`#info`)
 
             //create a new var called 'num' and store the entire #check *HTML element* to it
-            var num = document.queryselector(`#check`)
+            var num = document.querySelector(`#check`)
 
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
-            info.innerHTML = finalmessage
+            info.innerHTML = finalMessage
 
 
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
-            num.innerHTML = `gross pay: ${gross.toFixed(2)}<br> tax: ${taxAmount.toFixed(2)}<br> net: ${net.tofixed(2)}`
+            num.innerHTML = `gross pay: ${gross.toFixed(2)}<br> tax: ${taxAmount.toFixed(2)}<br> net:${net.toFixed(2)}`
 
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
-            document.queryselector(`#submit`).addEventListener(`click`, submitnow)
+            document.querySelector(`#submit`).addEventListener(`click`, submitNow)
             function submitNow(e)
             {
 
