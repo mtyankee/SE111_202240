@@ -1,0 +1,35 @@
+var body = document.querySelector(`body`)
+        //the document's body element
+        console.log(body)//shows value stored
+        console.dir(body)//shows the value as an object with access to its properties and values
+
+        for(let i = 0; i < people.length; i++)
+        {
+            var tempDiv = document.createElement(`div`)
+            tempDiv.setAttribute(`id`, i)
+
+            //console.log(tempDiv)
+
+            tempDiv.setAttribute(`class`, `red`)
+
+            console.log(tempDiv)
+
+            for(key in people[i])
+            {
+                var p = document.createElement(`p`)
+                var text = document.createTextNode(`${key}:${people[i][key]}`)
+
+                p.appendChild(text)
+                tempDiv.appendChild(p)
+
+            }
+
+
+            body.appendChild(tempDiv)
+        }
+
+
+
+    </script>
+</body>
+</html>
